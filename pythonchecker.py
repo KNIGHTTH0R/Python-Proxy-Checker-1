@@ -1,7 +1,6 @@
-#!/usr/bin/env python
 import urllib2, socket
 
-socket.setdefaulttimeout(60)
+socket.setdefaulttimeout(3)
 
 # read the proxy list
 proxyList = open("proxylist.txt", "r")
@@ -25,7 +24,6 @@ def is_bad_proxy(pip):
 
 for item in proxyList:
     if is_bad_proxy(item):
-        print "Bad Proxy", item
+        print "BadProxy", item
     else:
-        print item, "is working"
-#By DemoTheGorgon ;)
+        print "GoodProxy", item
