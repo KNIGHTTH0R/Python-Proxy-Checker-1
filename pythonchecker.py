@@ -4,7 +4,7 @@ import urllib2, socket
 socket.setdefaulttimeout(60)
 
 # read the proxy list
-proxyList = open("proxylist.txt", "r") # there are two sample proxy ip
+proxyList = open("proxylist.txt", "r")
 
 def is_bad_proxy(pip):    
     try:        
